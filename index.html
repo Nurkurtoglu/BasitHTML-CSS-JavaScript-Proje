@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odev</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        h1 {
+            color: peru;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 64px;
+        }
+        h2{
+            color: peru;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 48px;
+        }
+        p{
+            color: peru;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Merhaba, Ikra! , Hos Geldin!</h1>
+    <h2 id="saat"> </h2>
+
+    <p>Tarihinde    <strong>Frontend Web Development Patikasi</strong>' nin JavaScript Bolumu 1. Odev </p>
+</body>
+<script>
+        prompt("Lutfen isminizi giriniz:")
+
+    function saatiGuncelle(){
+        let saatDiv = document.getElementById("saat")
+        let suan = new Date()
+        saatDiv.innerHTML = `${suan.toLocaleDateString()} ${suan.toLocaleTimeString()}`
+    }
+
+    saatiGuncelle()
+    // Saati her saniye güncelle
+    setInterval(saatiGuncelle, 1000); 
+</script>
+</html>
